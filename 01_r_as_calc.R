@@ -1,2 +1,2 @@
 2 + 2
-read.csv("data/heroes_information.csv")
+heroes <- read.csv("data/heroes_information.csv")
