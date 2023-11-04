@@ -158,7 +158,7 @@ ggplot() +
 install.packages("hrbrthemes")
 
 
-ggplot(data = heroes, aes(x = Height,
+my_gg <- ggplot(data = heroes, aes(x = Height,
                           y = Weight)) +
   geom_point(aes(size = Weight,
                  colour = Alignment),
@@ -171,3 +171,10 @@ ggplot(data = heroes, aes(x = Height,
        subtitle = "whatever2") +
   hrbrthemes::theme_ipsum()
 
+my_gg
+
+ggplot(data = heroes, aes(x = Gender,
+                          y = Weight)) +
+  geom_violin(aes(fill = Gender)) +
+  geom_boxplot(width = .12, alpha = .7) +
+  hrbrthemes::theme_ipsum()
